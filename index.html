@@ -319,7 +319,7 @@ footer {
 
 <!-- NAV -->
 <nav id="nav">
-  <div class="nav-logo">Prakruti Bhaskar<em>.</em></div>
+  <div class="nav-logo">Prakruti Bhaskar<em></em></div>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#skills">Skills</a></li>
@@ -353,10 +353,7 @@ footer {
     </div>
   </div>
 
-  <div class="scroll-line">
-    <div class="tick"></div>
-    <span>Scroll</span>
-  </div>
+  
 </div>
 
 <!-- ABOUT -->
@@ -371,7 +368,7 @@ footer {
           <div class="stat-l">CGPA / 10</div>
         </div>
         <div class="stat">
-          <div class="stat-n">6</div>
+          <div class="stat-n">7</div>
           <div class="stat-l">Projects shipped</div>
         </div>
         <div class="stat">
@@ -386,7 +383,7 @@ footer {
     </div>
     <div class="about-copy reveal">
       <p>I'm a Computer Science undergrad at BMSCE with a serious interest in machine learning, LLMs, and building systems end-to-end — from raw data to the final user interaction.</p>
-      <p>My work spans telemetry-driven ML pipelines (LightGBM + SHAP), fully offline on-device AI (llama.cpp, Whisper Tiny, Piper TTS), clinical NLP (BioClinicalBERT, pgvector), and voice-first web products. I care about systems that are explainable, deployable, and actually useful.</p>
+      <p>My work spans telemetry-driven ML pipelines (LightGBM + SHAP), fully offline on-device AI (llama.cpp, Whisper Tiny, Piper TTS), clinical NLP (BioClinicalBERT, pgvector), RAG evaluation tooling, and voice-first web products. I care about systems that are explainable, deployable, and actually useful.</p>
       <p>Currently exploring LLM evaluation, retrieval-augmented generation, and agentic workflows. Runner-up at BMSCE Ideathon 2025, winning ₹25,000 in seed funding.</p>
       <p>Open to SWE and ML internships. I move fast and document obsessively.</p>
     </div>
@@ -411,6 +408,7 @@ footer {
         <span class="sk-tag">Piper TTS</span>
         <span class="sk-tag">Groq API</span>
         <span class="sk-tag">LLM APIs</span>
+        <span class="sk-tag">RAG / BM25</span>
         <span class="sk-tag">Pandas</span>
         <span class="sk-tag">Streamlit</span>
       </div>
@@ -426,6 +424,8 @@ footer {
         <span class="sk-tag">pgvector</span>
         <span class="sk-tag">MongoDB</span>
         <span class="sk-tag">SQLite</span>
+        <span class="sk-tag">Alembic</span>
+        <span class="sk-tag">Redis</span>
         <span class="sk-tag">JWT Auth</span>
         <span class="sk-tag">Docker</span>
         <span class="sk-tag">Linux / Bash</span>
@@ -457,7 +457,71 @@ footer {
   <p class="sec-label reveal"><span class="n">03 —</span> Projects</p>
   <div class="proj-list">
 
-    <a class="proj-item reveal" href="https://github.com/PrakrutiBhaskar" target="_blank" rel="noopener">
+    <a class="proj-item reveal" href="https://ragnarok-zlis.onrender.com/" target="_blank" rel="noopener">
+      <div class="proj-num-wrap">
+        <div class="proj-num">02</div>
+        <div class="proj-badges">
+          <span class="proj-badge live">Live</span>
+          <span class="proj-badge">RAG / LLM</span>
+        </div>
+      </div>
+      <div>
+        <h3 class="proj-title">RAGnarok</h3>
+        <p class="proj-desc">RAG pipeline failure attribution and quality debugger — diagnoses whether a wrong answer came from retrieval or generation via BM25 oracle injection, independent of the vector DB in use. Pluggable adapters for Chroma/Pinecone/Qdrant, OpenAI/HuggingFace embeddings, and OpenAI/Groq/Anthropic LLMs, with a compound classifier and rule-based recommendation engine. Ships a FastAPI + SSE backend, a Typer CLI, Redis pub/sub for multi-worker progress streaming, Alembic-migrated SQLite persistence, and a security layer (secret scrubbing, PII redaction, pickle rejection, heuristic prompt-injection detection on oracle chunks).</p>
+        <div class="proj-metrics">
+          <span class="proj-metric">474 tests passing</span>
+          <span class="proj-metric">87–88% coverage</span>
+          <span class="proj-metric">Strict mypy clean</span>
+        </div>
+        <div class="stack">
+          <span class="stag">Python</span><span class="stag">FastAPI</span><span class="stag">Typer</span><span class="stag">SQLAlchemy</span><span class="stag">Alembic</span><span class="stag">Redis</span><span class="stag">ChromaDB</span><span class="stag">Pinecone</span><span class="stag">Qdrant</span>
+        </div>
+      </div>
+      <div class="arrow-col">↗</div>
+    </a>
+
+    <a class="proj-item reveal" href="https://github.com/PrakrutiBhaskar/LERNZY" target="_blank" rel="noopener">
+      <div class="proj-num-wrap">
+        <div class="proj-num">04</div>
+        <div class="proj-badges">
+          <span class="proj-badge">On-device AI</span>
+          <span class="proj-badge">EdTech</span>
+        </div>
+      </div>
+      <div>
+        <h3 class="proj-title">LERNZY</h3>
+        <p class="proj-desc">Fully offline Android tutoring app for Karnataka State Board grades 6–8 (English, Hindi, Kannada). Runs Phi-3 Mini 4K Instruct (GGUF INT4, ~2.2 GB) entirely on-device via llama.rn/llama.cpp — zero API keys, zero network calls. Interest-injection pipeline resolves placeholders at runtime so lessons adapt to each student. Multilingual voice interaction via Whisper Tiny (auto-detects language) and Piper TTS with per-language .onnx models.</p>
+        <div class="proj-metrics">
+          <span class="proj-metric">100% offline</span>
+          <span class="proj-metric">3 languages</span>
+          <span class="proj-metric">Grades 6–8</span>
+        </div>
+        <div class="stack">
+          <span class="stag">React Native</span><span class="stag">TypeScript</span><span class="stag">Expo</span><span class="stag">llama.rn</span><span class="stag">Whisper Tiny</span><span class="stag">Piper TTS</span><span class="stag">expo-sqlite</span>
+        </div>
+      </div>
+      <div class="arrow-col">↗</div>
+    </a> 
+
+    <a class="proj-item reveal" href="https://hireready-0wtj.onrender.com/" target="_blank" rel="noopener">
+      <div class="proj-num-wrap">
+        <div class="proj-num">03</div>
+        <div class="proj-badges">
+          <span class="proj-badge live">Live</span>
+          <span class="proj-badge">Voice AI</span>
+        </div>
+      </div>
+      <div>
+        <h3 class="proj-title">HireReady</h3>
+        <p class="proj-desc">Voice-first AI mock interview platform. Full pipeline from browser microphone capture through Whisper transcription to multi-turn LLaMA 3.3 70B responses with browser TTS playback. Structured feedback engine returns per-session scores, filler-word highlights, and role-specific coaching across configurable difficulty and duration parameters. API keys stay strictly server-side; audio is never written to disk.</p>
+        <div class="stack">
+          <span class="stag">React</span><span class="stag">Node.js</span><span class="stag">Express</span><span class="stag">Groq API</span><span class="stag">Whisper</span><span class="stag">Llama 3.3 70B</span><span class="stag">Framer Motion</span>
+        </div>
+      </div>
+      <div class="arrow-col">↗</div>
+    </a>
+
+    <a class="proj-item reveal" href="https://pitwall-f1.streamlit.app/" target="_blank" rel="noopener">
       <div class="proj-num-wrap">
         <div class="proj-num">01</div>
         <div class="proj-badges">
@@ -480,50 +544,11 @@ footer {
       <div class="arrow-col">↗</div>
     </a>
 
-    <a class="proj-item reveal" href="https://github.com/PrakrutiBhaskar" target="_blank" rel="noopener">
-      <div class="proj-num-wrap">
-        <div class="proj-num">02</div>
-        <div class="proj-badges">
-          <span class="proj-badge live">Live</span>
-          <span class="proj-badge">Voice AI</span>
-        </div>
-      </div>
-      <div>
-        <h3 class="proj-title">HireReady</h3>
-        <p class="proj-desc">Voice-first AI mock interview platform. Full pipeline from browser microphone capture through Whisper transcription to multi-turn LLaMA 3.3 70B responses with browser TTS playback. Structured feedback engine returns per-session scores, filler-word highlights, and role-specific coaching across configurable difficulty and duration parameters. API keys stay strictly server-side; audio is never written to disk.</p>
-        <div class="stack">
-          <span class="stag">React</span><span class="stag">Node.js</span><span class="stag">Express</span><span class="stag">Groq API</span><span class="stag">Whisper</span><span class="stag">Llama 3.3 70B</span><span class="stag">Framer Motion</span>
-        </div>
-      </div>
-      <div class="arrow-col">↗</div>
-    </a>
+    
 
-    <a class="proj-item reveal" href="https://github.com/PrakrutiBhaskar" target="_blank" rel="noopener">
+    <a class="proj-item reveal" href="https://github.com/PrakrutiBhaskar/Insuro" target="_blank" rel="noopener">
       <div class="proj-num-wrap">
-        <div class="proj-num">03</div>
-        <div class="proj-badges">
-          <span class="proj-badge">On-device AI</span>
-          <span class="proj-badge">EdTech</span>
-        </div>
-      </div>
-      <div>
-        <h3 class="proj-title">LERNZY</h3>
-        <p class="proj-desc">Fully offline Android tutoring app for Karnataka State Board grades 6–8 (English, Hindi, Kannada). Runs Phi-3 Mini 4K Instruct (GGUF INT4, ~2.2 GB) entirely on-device via llama.rn/llama.cpp — zero API keys, zero network calls. Interest-injection pipeline resolves placeholders at runtime so lessons adapt to each student. Multilingual voice interaction via Whisper Tiny (auto-detects language) and Piper TTS with per-language .onnx models.</p>
-        <div class="proj-metrics">
-          <span class="proj-metric">100% offline</span>
-          <span class="proj-metric">3 languages</span>
-          <span class="proj-metric">Grades 6–8</span>
-        </div>
-        <div class="stack">
-          <span class="stag">React Native</span><span class="stag">TypeScript</span><span class="stag">Expo</span><span class="stag">llama.rn</span><span class="stag">Whisper Tiny</span><span class="stag">Piper TTS</span><span class="stag">expo-sqlite</span>
-        </div>
-      </div>
-      <div class="arrow-col">↗</div>
-    </a>
-
-    <a class="proj-item reveal" href="https://github.com/PrakrutiBhaskar" target="_blank" rel="noopener">
-      <div class="proj-num-wrap">
-        <div class="proj-num">04</div>
+        <div class="proj-num">05</div>
         <div class="proj-badges">
           <span class="proj-badge">Clinical ML</span>
           <span class="proj-badge">Docker</span>
@@ -546,7 +571,7 @@ footer {
 
     <a class="proj-item reveal" href="https://github.com/PrakrutiBhaskar" target="_blank" rel="noopener">
       <div class="proj-num-wrap">
-        <div class="proj-num">05</div>
+        <div class="proj-num">06</div>
         <div class="proj-badges">
           <span class="proj-badge">Full-stack</span>
           <span class="proj-badge">Role-based</span>
@@ -564,7 +589,7 @@ footer {
 
     <a class="proj-item reveal" href="https://pantrypal-5djy.onrender.com" target="_blank" rel="noopener">
       <div class="proj-num-wrap">
-        <div class="proj-num">06</div>
+        <div class="proj-num">07</div>
         <div class="proj-badges">
           <span class="proj-badge live">Live</span>
           <span class="proj-badge">Full-stack</span>
@@ -628,7 +653,7 @@ footer {
   <div class="contact-layout">
     <div class="reveal">
       <h2 class="contact-hed">Let's build something <em>together</em></h2>
-      <p class="contact-note">Open to SWE and ML internships, research collaborations, and interesting projects. If you're building something that matters — and especially something offline-first — reach out.</p>
+      <p class="contact-note">Open to SWE and ML internships, research collaborations, and interesting projects. If you're building something that matters , reach out.</p>
       <p class="contact-status"><span class="status-dot"></span> Available for opportunities — Bengaluru &amp; remote</p>
     </div>
     <div class="contact-links reveal">
