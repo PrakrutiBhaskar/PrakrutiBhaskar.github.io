@@ -319,7 +319,7 @@ footer {
 
 <!-- NAV -->
 <nav id="nav">
-  <div class="nav-logo">Prakruti Bhaskar<em></em></div>
+  <div class="nav-logo">Prakruti Bhaskar<em>.</em></div>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#skills">Skills</a></li>
@@ -335,16 +335,16 @@ footer {
   <p class="hero-year" aria-hidden="true">BMSCE · 2024–2028</p>
 
   <div class="hero-content">
-    <p class="hero-eyebrow">CS Undergrad · ML &amp; Systems</p>
+    <p class="hero-eyebrow">ML/AI Engineer · Production-Grade Systems</p>
     <h1 class="hero-name">
       Prakruti
       <em class="l2">Bhaskar</em>
     </h1>
     <div class="hero-lower">
       <p class="hero-sub">
-        Second-year CS student at <strong>BMS College of Engineering, Bengaluru</strong> —
-        building end-to-end ML pipelines, on-device AI systems, and full-stack platforms.
-        Interested in agentic AI, retrieval systems, and software that works where the internet doesn't.
+        Building production-grade, end-to-end systems — from telemetry-driven predictive
+        models to on-device LLM inference — with a focus on measurable accuracy,
+        explainability, and deployment. CS undergrad at <strong>BMS College of Engineering, Bengaluru</strong>.
       </p>
       <div class="hero-ctas">
         <a href="#projects" class="btn-outline"><span>View Work</span></a>
@@ -353,7 +353,6 @@ footer {
     </div>
   </div>
 
-  
 </div>
 
 <!-- ABOUT -->
@@ -368,7 +367,7 @@ footer {
           <div class="stat-l">CGPA / 10</div>
         </div>
         <div class="stat">
-          <div class="stat-n">7</div>
+          <div class="stat-n">8</div>
           <div class="stat-l">Projects shipped</div>
         </div>
         <div class="stat">
@@ -382,9 +381,9 @@ footer {
       </div>
     </div>
     <div class="about-copy reveal">
-      <p>I'm a Computer Science undergrad at BMSCE with a serious interest in machine learning, LLMs, and building systems end-to-end — from raw data to the final user interaction.</p>
-      <p>My work spans telemetry-driven ML pipelines (LightGBM + SHAP), fully offline on-device AI (llama.cpp, Whisper Tiny, Piper TTS), clinical NLP (BioClinicalBERT, pgvector), RAG evaluation tooling, and voice-first web products. I care about systems that are explainable, deployable, and actually useful.</p>
-      <p>Currently exploring LLM evaluation, retrieval-augmented generation, and agentic workflows. Runner-up at BMSCE Ideathon 2025, winning ₹25,000 in seed funding.</p>
+      <p>I'm an ML/AI engineer and Computer Science undergrad at BMSCE building production-grade systems end-to-end — from raw data to the final user interaction — with a focus on measurable accuracy, explainability, and deployment.</p>
+      <p>My work spans telemetry-driven ML pipelines (LightGBM + SHAP), RAG failure diagnostics (BM25 oracle injection, multi-provider LLM adapters), fully offline on-device AI (llama.cpp, Whisper Tiny, Piper TTS), clinical NLP (BioClinicalBERT, pgvector), and voice-first web products. I care about systems that are explainable, deployable, and actually useful.</p>
+      <p>Currently exploring LLM evaluation, retrieval-augmented generation, and agentic workflows. 2nd place at the InternLoom X Relyntis Hackathon 2026 (solo), and runner-up at BMSCE Ideathon 2025, winning ₹25,000 in seed funding.</p>
       <p>Open to SWE and ML internships. I move fast and document obsessively.</p>
     </div>
   </div>
@@ -406,10 +405,12 @@ footer {
         <span class="sk-tag">Whisper</span>
         <span class="sk-tag">llama.cpp / llama.rn</span>
         <span class="sk-tag">Piper TTS</span>
-        <span class="sk-tag">Groq API</span>
-        <span class="sk-tag">LLM APIs</span>
+        <span class="sk-tag">Anthropic Claude API</span>
+        <span class="sk-tag">Groq</span>
         <span class="sk-tag">RAG / BM25</span>
+        <span class="sk-tag">ChromaDB</span>
         <span class="sk-tag">Pandas</span>
+        <span class="sk-tag">Plotly</span>
         <span class="sk-tag">Streamlit</span>
       </div>
     </div>
@@ -428,6 +429,7 @@ footer {
         <span class="sk-tag">Redis</span>
         <span class="sk-tag">JWT Auth</span>
         <span class="sk-tag">Docker</span>
+        <span class="sk-tag">GitHub Actions / CI-CD</span>
         <span class="sk-tag">Linux / Bash</span>
         <span class="sk-tag">SQL</span>
       </div>
@@ -457,9 +459,9 @@ footer {
   <p class="sec-label reveal"><span class="n">03 —</span> Projects</p>
   <div class="proj-list">
 
-    <a class="proj-item reveal" href="https://ragnarok-zlis.onrender.com/" target="_blank" rel="noopener">
+    <a class="proj-item reveal" href="https://github.com/PrakrutiBhaskar/RAGnarok" target="_blank" rel="noopener">
       <div class="proj-num-wrap">
-        <div class="proj-num">02</div>
+        <div class="proj-num">01</div>
         <div class="proj-badges">
           <span class="proj-badge live">Live</span>
           <span class="proj-badge">RAG / LLM</span>
@@ -467,22 +469,45 @@ footer {
       </div>
       <div>
         <h3 class="proj-title">RAGnarok</h3>
-        <p class="proj-desc">RAG pipeline failure attribution and quality debugger — diagnoses whether a wrong answer came from retrieval or generation via BM25 oracle injection, independent of the vector DB in use. Pluggable adapters for Chroma/Pinecone/Qdrant, OpenAI/HuggingFace embeddings, and OpenAI/Groq/Anthropic LLMs, with a compound classifier and rule-based recommendation engine. Ships a FastAPI + SSE backend, a Typer CLI, Redis pub/sub for multi-worker progress streaming, Alembic-migrated SQLite persistence, and a security layer (secret scrubbing, PII redaction, pickle rejection, heuristic prompt-injection detection on oracle chunks).</p>
+        <p class="proj-desc">Automated failure-diagnostics tool for RAG pipelines — attributes a wrong answer to retrieval, generation, or data-quality issues using a BM25 "oracle injection" technique that reconstructs best-case retrieval as ground truth, independent of the vector DB in use. Provider-agnostic diagnostic engine spanning Chroma/Pinecone/Qdrant retrievers, OpenAI/HuggingFace embeddings, and OpenAI/Anthropic/Groq LLMs, with a 6-way compound failure-classification matrix, a hand-labeled golden-set evaluation harness, an async Dockerized FastAPI + SQLAlchemy backend, and an SSE-streamed live diagnosis dashboard in React.</p>
         <div class="proj-metrics">
-          <span class="proj-metric">474 tests passing</span>
-          <span class="proj-metric">87–88% coverage</span>
-          <span class="proj-metric">Strict mypy clean</span>
+          <span class="proj-metric">530+ tests passing</span>
+          <span class="proj-metric">6-way failure classifier</span>
+          <span class="proj-metric">ruff / mypy / bandit gated</span>
         </div>
         <div class="stack">
-          <span class="stag">Python</span><span class="stag">FastAPI</span><span class="stag">Typer</span><span class="stag">SQLAlchemy</span><span class="stag">Alembic</span><span class="stag">Redis</span><span class="stag">ChromaDB</span><span class="stag">Pinecone</span><span class="stag">Qdrant</span>
+          <span class="stag">FastAPI</span><span class="stag">React</span><span class="stag">Async SQLAlchemy</span><span class="stag">BM25</span><span class="stag">Chroma</span><span class="stag">Pinecone</span><span class="stag">Qdrant</span><span class="stag">Docker</span>
         </div>
       </div>
       <div class="arrow-col">↗</div>
     </a>
 
-    <a class="proj-item reveal" href="https://github.com/PrakrutiBhaskar/LERNZY" target="_blank" rel="noopener">
+    <a class="proj-item reveal" href="https://github.com/PrakrutiBhaskar/SkillForge" target="_blank" rel="noopener">
       <div class="proj-num-wrap">
-        <div class="proj-num">04</div>
+        <div class="proj-num">02</div>
+        <div class="proj-badges">
+          <span class="proj-badge live">Live</span>
+          <span class="proj-badge">2nd Place</span>
+        </div>
+      </div>
+      <div>
+        <h3 class="proj-title">SkillForge</h3>
+        <p class="proj-desc">LLM-based information extraction pipeline that converts unstructured resume PDFs into structured, scored candidate shortlists against a job description. Prompt engineering constrains the model to treat resume/JD text as pure data, with a dedicated detection layer that caps extraction confidence on flagged prompt-injection attempts. A multi-provider LLM inference layer (Anthropic + Groq) adds automatic failover, RPM-aware self-throttling, jittered exponential backoff, and response caching keyed on prompt hash, keeping a concurrent 8-way extraction pipeline resilient to real-world rate-limit exhaustion — backed by a non-LLM regex/heuristic fallback extractor and a determinism harness that flags score drift &gt; 5 points across reruns.</p>
+        <div class="proj-metrics">
+          <span class="proj-metric">2nd of 30 — solo build</span>
+          <span class="proj-metric">127 unit tests, CI</span>
+          <span class="proj-metric">Multi-provider failover</span>
+        </div>
+        <div class="stack">
+          <span class="stag">Anthropic API</span><span class="stag">Groq API</span><span class="stag">PyMuPDF</span><span class="stag">Tesseract OCR</span><span class="stag">Pandas</span><span class="stag">Streamlit</span>
+        </div>
+      </div>
+      <div class="arrow-col">↗</div>
+    </a>
+
+    <a class="proj-item reveal" href="https://github.com/PrakrutiBhaskar/LERNZY.git" target="_blank" rel="noopener">
+      <div class="proj-num-wrap">
+        <div class="proj-num">03</div>
         <div class="proj-badges">
           <span class="proj-badge">On-device AI</span>
           <span class="proj-badge">EdTech</span>
@@ -490,22 +515,22 @@ footer {
       </div>
       <div>
         <h3 class="proj-title">LERNZY</h3>
-        <p class="proj-desc">Fully offline Android tutoring app for Karnataka State Board grades 6–8 (English, Hindi, Kannada). Runs Phi-3 Mini 4K Instruct (GGUF INT4, ~2.2 GB) entirely on-device via llama.rn/llama.cpp — zero API keys, zero network calls. Interest-injection pipeline resolves placeholders at runtime so lessons adapt to each student. Multilingual voice interaction via Whisper Tiny (auto-detects language) and Piper TTS with per-language .onnx models.</p>
+        <p class="proj-desc">Fully offline Android tutoring app for Karnataka State Board grades 6–8 (English, Hindi, Kannada, Math, Science, Social Studies). Runs Phi-3 Mini 4K Instruct (GGUF INT4, ~2.2 GB) entirely on-device via llama.rn/llama.cpp JNI — zero API keys, zero network calls, optimized to run reliably on 2GB-RAM low-end Android devices. Interest-injection pipeline resolves placeholder tokens at runtime so every lesson adapts to the student's real interests. Multilingual voice interaction via Whisper Tiny for on-device STT (auto-detects English/Hindi/Kannada) and Piper TTS with per-language models — entirely offline.</p>
         <div class="proj-metrics">
           <span class="proj-metric">100% offline</span>
-          <span class="proj-metric">3 languages</span>
-          <span class="proj-metric">Grades 6–8</span>
+          <span class="proj-metric">Runs on 2GB RAM</span>
+          <span class="proj-metric">Grades 6–8, 3 languages</span>
         </div>
         <div class="stack">
-          <span class="stag">React Native</span><span class="stag">TypeScript</span><span class="stag">Expo</span><span class="stag">llama.rn</span><span class="stag">Whisper Tiny</span><span class="stag">Piper TTS</span><span class="stag">expo-sqlite</span>
+          <span class="stag">React Native</span><span class="stag">Expo</span><span class="stag">llama.rn / llama.cpp</span><span class="stag">Whisper Tiny</span><span class="stag">Piper TTS</span><span class="stag">expo-sqlite</span>
         </div>
       </div>
       <div class="arrow-col">↗</div>
-    </a> 
+    </a>
 
-    <a class="proj-item reveal" href="https://hireready-0wtj.onrender.com/" target="_blank" rel="noopener">
+    <a class="proj-item reveal" href="https://github.com/GamanaSathvika/HireReady.git" target="_blank" rel="noopener">
       <div class="proj-num-wrap">
-        <div class="proj-num">03</div>
+        <div class="proj-num">04</div>
         <div class="proj-badges">
           <span class="proj-badge live">Live</span>
           <span class="proj-badge">Voice AI</span>
@@ -513,40 +538,18 @@ footer {
       </div>
       <div>
         <h3 class="proj-title">HireReady</h3>
-        <p class="proj-desc">Voice-first AI mock interview platform. Full pipeline from browser microphone capture through Whisper transcription to multi-turn LLaMA 3.3 70B responses with browser TTS playback. Structured feedback engine returns per-session scores, filler-word highlights, and role-specific coaching across configurable difficulty and duration parameters. API keys stay strictly server-side; audio is never written to disk.</p>
-        <div class="stack">
-          <span class="stag">React</span><span class="stag">Node.js</span><span class="stag">Express</span><span class="stag">Groq API</span><span class="stag">Whisper</span><span class="stag">Llama 3.3 70B</span><span class="stag">Framer Motion</span>
-        </div>
-      </div>
-      <div class="arrow-col">↗</div>
-    </a>
-
-    <a class="proj-item reveal" href="https://pitwall-f1.streamlit.app/" target="_blank" rel="noopener">
-      <div class="proj-num-wrap">
-        <div class="proj-num">01</div>
-        <div class="proj-badges">
-          <span class="proj-badge live">Live</span>
-          <span class="proj-badge">ML</span>
-        </div>
-      </div>
-      <div>
-        <h3 class="proj-title">Pit Wall</h3>
-        <p class="proj-desc">F1 race outcome predictor built on 76,000+ laps across four seasons (2021–2024). End-to-end pipeline: FastF1 telemetry ingestion → 14 domain-specific engineered features → LightGBM → SHAP explainability → interactive Streamlit dashboard with lap-by-lap race replay. Validated on a fully held-out 2025 test set of 25,000+ laps.</p>
+        <p class="proj-desc">Voice-first AI mock interview platform: mic → Whisper STT → LLaMA 3.3 70B (Groq) → TTS, achieving sub-2s round-trip latency across configurable role, difficulty, and duration modes. Structured feedback engine returns per-session scores, filler-word highlights, and role-specific coaching tips. Backend hardened via server-side API key isolation, in-memory Multer audio processing (zero disk writes), and a decoupled live-caption pipeline; frontend and backend deployed separately on Render for isolation.</p>
         <div class="proj-metrics">
-          <span class="proj-metric">MAE 1.56 positions</span>
-          <span class="proj-metric">94.1% Top-5 accuracy</span>
-          <span class="proj-metric">25,000+ lap test set</span>
+          <span class="proj-metric">Sub-2s round-trip latency</span>
         </div>
         <div class="stack">
-          <span class="stag">Python</span><span class="stag">LightGBM</span><span class="stag">SHAP</span><span class="stag">FastF1</span><span class="stag">Streamlit</span><span class="stag">Plotly</span>
+          <span class="stag">React</span><span class="stag">Node.js</span><span class="stag">Express</span><span class="stag">Groq API</span><span class="stag">Whisper</span><span class="stag">Llama 3.3 70B</span><span class="stag">Tailwind CSS</span>
         </div>
       </div>
       <div class="arrow-col">↗</div>
     </a>
 
-    
-
-    <a class="proj-item reveal" href="https://github.com/PrakrutiBhaskar/Insuro" target="_blank" rel="noopener">
+    <a class="proj-item reveal" href="https://github.com/PrakrutiBhaskar/Insuro.git" target="_blank" rel="noopener">
       <div class="proj-num-wrap">
         <div class="proj-num">05</div>
         <div class="proj-badges">
@@ -569,9 +572,32 @@ footer {
       <div class="arrow-col">↗</div>
     </a>
 
-    <a class="proj-item reveal" href="https://github.com/PrakrutiBhaskar" target="_blank" rel="noopener">
+    <a class="proj-item reveal" href="https://github.com/PrakrutiBhaskar/PIT_WALL.git" target="_blank" rel="noopener">
       <div class="proj-num-wrap">
         <div class="proj-num">06</div>
+        <div class="proj-badges">
+          <span class="proj-badge live">Live</span>
+          <span class="proj-badge">ML</span>
+        </div>
+      </div>
+      <div>
+        <h3 class="proj-title">Pit Wall</h3>
+        <p class="proj-desc">F1 race outcome predictor built on 76,000+ laps across four seasons (2021–2024). End-to-end pipeline: FastF1 telemetry ingestion → 14 domain-specific engineered features → LightGBM → SHAP explainability → interactive Streamlit dashboard with lap-by-lap race replay. Validated on a fully held-out 2025 test set of 25,000+ laps.</p>
+        <div class="proj-metrics">
+          <span class="proj-metric">MAE 1.56 positions</span>
+          <span class="proj-metric">94.1% Top-5 accuracy</span>
+          <span class="proj-metric">25,000+ lap test set</span>
+        </div>
+        <div class="stack">
+          <span class="stag">Python</span><span class="stag">LightGBM</span><span class="stag">SHAP</span><span class="stag">FastF1</span><span class="stag">Streamlit</span><span class="stag">Plotly</span>
+        </div>
+      </div>
+      <div class="arrow-col">↗</div>
+    </a>
+
+    <a class="proj-item reveal" href="https://github.com/PrakrutiBhaskar222/Coolie" target="_blank" rel="noopener">
+      <div class="proj-num-wrap">
+        <div class="proj-num">07</div>
         <div class="proj-badges">
           <span class="proj-badge">Full-stack</span>
           <span class="proj-badge">Role-based</span>
@@ -589,7 +615,7 @@ footer {
 
     <a class="proj-item reveal" href="https://pantrypal-5djy.onrender.com" target="_blank" rel="noopener">
       <div class="proj-num-wrap">
-        <div class="proj-num">07</div>
+        <div class="proj-num">08</div>
         <div class="proj-badges">
           <span class="proj-badge live">Live</span>
           <span class="proj-badge">Full-stack</span>
@@ -639,6 +665,12 @@ footer {
   <div class="ach-list">
     <p class="ach-label reveal">Achievements</p>
     <div class="ach-item reveal">
+      <div class="ach-badge">2nd Place<br/>Solo</div>
+      <div class="ach-copy">
+        <strong>Hackathon — InternLoom X Relyntis, July 2026.</strong> Ranked 2nd of 30 participants, competing solo, by building and deploying <a href="#projects" style="color:inherit;border-bottom:1px solid rgba(192,138,48,.3);text-decoration:none;">SkillForge</a> — an LLM-powered resume shortlisting engine with multi-provider failover and prompt-injection safeguards.
+      </div>
+    </div>
+    <div class="ach-item reveal">
       <div class="ach-badge">Runner-Up<br/>₹25,000</div>
       <div class="ach-copy">
         <strong>Ideathon — BMSCE Bengaluru, November 2025.</strong> Conceptualised a medical emergency drone response system for delivering time-critical supplies during emergencies. Awarded ₹25,000 in seed funding, placing runner-up among 10 competing teams.
@@ -653,10 +685,15 @@ footer {
   <div class="contact-layout">
     <div class="reveal">
       <h2 class="contact-hed">Let's build something <em>together</em></h2>
-      <p class="contact-note">Open to SWE and ML internships, research collaborations, and interesting projects. If you're building something that matters , reach out.</p>
+      <p class="contact-note">Open to SWE and ML internships, research collaborations, and interesting projects. If you're building something that matters — and especially something offline-first — reach out.</p>
       <p class="contact-status"><span class="status-dot"></span> Available for opportunities — Bengaluru &amp; remote</p>
     </div>
     <div class="contact-links reveal">
+      <a class="c-link" href="tel:+917619443280">
+        <span class="c-icon">Phone</span>
+        +91 761 944 3280
+        <span class="c-arrow">↗</span>
+      </a>
       <a class="c-link" href="mailto:prakrutibhaskar@gmail.com">
         <span class="c-icon">Email</span>
         prakrutibhaskar@gmail.com
